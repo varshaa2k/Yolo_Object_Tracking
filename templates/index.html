@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Detection Using YOLO</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #f3f9ff, #e6f0fa);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #003366;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        p.description {
+            text-align: center;
+            font-size: 1.1rem;
+            max-width: 600px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        label, input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            background-color: #003366;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0055aa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Object Detection Using YOLO</h1>
+    <p class="description">
+        Upload a video file to detect and track objects in real time using the YOLO model.
+        The processed video will display object IDs, their speeds, and a summary will be generated.
+    </p>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="file">Choose a video file:</label>
+        <input type="file" name="file" id="file" accept="video/*" required>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
